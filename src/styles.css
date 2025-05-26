@@ -1,4 +1,22 @@
+html, body {
+  height: 480px;
+  width: 640px;
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
 
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('assets/Bg_For_Dress_Up_Game.png');
+  background-size: cover;
+  z-index: 0;
+}
 
 .polaroid-frame {
   position: relative;

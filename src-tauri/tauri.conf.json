@@ -10,9 +10,11 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "melodydressup",
-        "width": 800,
-        "height": 600
+        "title": "Dress Up! with myMelody",
+        "width": 640,
+        "height": 480,
+        "resizable": true,
+        "fullscreen": false
       }
     ],
     "security": {
