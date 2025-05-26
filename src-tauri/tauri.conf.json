@@ -14,11 +14,22 @@
         "width": 640,
         "height": 480,
         "resizable": true,
-        "fullscreen": false
+        "fullscreen": false,
+        "transparent": true,
+        "decorations": false
       }
     ],
     "security": {
-      "csp": null
+      "csp": null,
+      "capabilities": [
+        {
+          "identifier": "draggable-window",
+          "windows": ["*"],
+          "permissions": [
+            "core:window:allow-start-dragging"
+          ]
+        }
+      ]
     }
   },
   "bundle": {

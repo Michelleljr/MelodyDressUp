@@ -18,31 +18,53 @@ html, body {
   z-index: 0;
 }
 
-
-
-
-
-#character {
-  width: 180px;
-  height: 180px;
-  object-fit: contain;
-  margin-bottom: 20px;
+.polaroid-frame{
+  position: relative;
+  width: 216px;
+  height: 260px;
+  margin: 0 auto;
+  z-index: 1;
 }
 
-/* Swiper container styling */
+.polaroid-frame svg {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+
+
+/* absolute position of character to fit in svg*/
+#character {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  width: 130px;
+  height: auto;
+  z-index: 2;
+}
+
 .wardrobe-swiper {
-  width: 100%; /* full width of frame */
-  max-width: 320px; /* limit width */
-  height: 120px; /* fixed height for buttons */
-  box-sizing: border-box;
-  /* optionally add background or border */
+  position: absolute;
+  left: 50%;
+  top: 160px;
+  transform: translateX(-50%);
+  width: 200px;
+  height: auto;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Style swiper slides to arrange buttons horizontally */
 .swiper-slide {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 20px;
 }
 
 /* Style buttons */
