@@ -1,18 +1,40 @@
 const { invoke } = window.__TAURI__.core;
+const buttonsOrOutfits =[
+  'assets/dresses/christmas.png',
+  'assets/dresses/purple.png',
+  'assets/dresses/sprinkles.png',
+  'assets/dresses/pink.png',
+  'assets/dresses/yellow.png'
+]
 
-let greetInputEl;
-let greetMsgEl;
 
-async function greet() {
-  // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-  greetMsgEl.textContent = await invoke("greet", { name: greetInputEl.value });
+const dressedUP=[
+  'assets/dressesWithmodel/ChristmasModel.png',
+  'assets/dressesWithmodel/purpleModel.png',
+  'assets/dressesWithmodel/sprinklesModel.png',
+  'assets/dressesWithmodel/Pink model.png',
+  'assets/dressesWithmodel/Yellow model.png'
+
+]
+function DressUp(index){
+  document.getElementById('character').src = dressedUP[index];
 }
+window.DressUp = DressUp;
 
-window.addEventListener("DOMContentLoaded", () => {
-  greetInputEl = document.querySelector("#greet-input");
-  greetMsgEl = document.querySelector("#greet-msg");
-  document.querySelector("#greet-form").addEventListener("submit", (e) => {
-    e.preventDefault();
-    greet();
+window.addEventListener('DOMContentLoaded', () => {
+  const swiper = new Swiper('.wardrobe-swiper', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
   });
+
+
 });
+
+

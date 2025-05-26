@@ -3,37 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tauri App</title>
-    <script type="module" src="/main.js" defer></script>
+    <title>Dress up! with myMelody</title>
+    <script src="main.js" defer></script>
   </head>
 
   <body>
-    <main class="container">
-      <h1>Welcome to Tauri</h1>
+  <div class="background"></div>
+  <div class="polaroid-frame">
+    <img id="character" src="assets/Base_Model.png" alt="Character" />
 
-      <div class="row">
-        <a href="https://tauri.app" target="_blank">
-          <img src="/assets/tauri.svg" class="logo tauri" alt="Tauri logo" />
-        </a>
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-          target="_blank"
-        >
-          <img
-            src="/assets/javascript.svg"
-            class="logo vanilla"
-            alt="JavaScript logo"
-          />
-        </a>
+    <div class="wardrobe-swiper swiper">
+      <div class="swiper-wrapper">
+        <!-- First page 3 dresses -->
+        <div class="swiper-slide">
+          <button onclick="DressUp(0)">
+            <img src="assets/dresses/christmas.png" alt="Christmas Dress" />
+          </button>
+          <button onclick="DressUp(1)">
+            <img src="assets/dresses/pink.png" alt="Pink Dress" />
+          </button>
+          <button onclick="DressUp(2)">
+            <img src="assets/dresses/purple.png" alt="Purple Dress" />
+          </button>
+        </div>
+        <!-- Second page: 2 dresses -->
+        <div class="swiper-slide">
+          <button onclick="DressUp(3)">
+            <img src="assets/dresses/sprinkles.png" alt="Sprinkles Dress" />
+          </button>
+          <button onclick="DressUp(4)">
+            <img src="assets/dresses/yellow.png" alt="Yellow Dress" />
+          </button>
+        </div>
       </div>
-      <p>Click on the Tauri logo to learn more about the framework</p>
 
-      <form class="row" id="greet-form">
-        <input id="greet-input" placeholder="Enter a name..." />
-        <button type="submit">Greet</button>
-      </form>
-      <p id="greet-msg"></p>
-    </main>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+    </div>
+  </div>
   </body>
+
 </html>
