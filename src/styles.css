@@ -18,21 +18,10 @@ html, body {
   z-index: 0;
 }
 
-.polaroid-frame {
-  position: relative;
-  width: 350px; /* adjust as needed */
-  height: 400px; /* adjust as needed */
-  margin: 0 auto;
-  background: #fff; /* or your frame background */
-  border-radius: 12px;
-  padding: 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-/* Main character image styling */
+
+
+
 #character {
   width: 180px;
   height: 180px;
