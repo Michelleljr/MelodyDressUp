@@ -17,7 +17,14 @@ const dressedUP=[
 
 ]
 function DressUp(index){
-  document.getElementById('character').src = dressedUP[index];
+  document.getElementById('character');
+  character.classList.remove('magical');
+  // Change the outfit
+  character.src = dressedUP[index];
+  // Force reflow to allow re-adding the animation class
+  void character.offsetWidth;
+  // Add the magical animation class
+  character.classList.add('magical');
 }
 
 
